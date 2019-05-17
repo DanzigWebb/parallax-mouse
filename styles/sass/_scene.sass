@@ -1,0 +1,28 @@
+.body
+  &-scene
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    min-height: 100vh
+.scene
+  z-index: -1
+  &-layer
+    margin: auto
+    background-size: cover
+    width: 110%
+    height: 100%
+    position: absolute
+    left: -5%
+    transition: .6s ease-out
+    &--font1
+      background-image: url(../../img/parallax_bg.jpg)
+    &--font2
+      background-image: url(../../img/parallax_layer1.png)
+      background-position: top center
+      top: 0
+    &--font3
+      background-image: url(../../img/parallax_layer2.png)
+      width: 115%
+      left: -10%

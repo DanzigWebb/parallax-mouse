@@ -1,0 +1,83 @@
+body
+  font-size: 20px
+  margin: auto
+  position: relative
+  line-height: 1.35
+  font-family: 'Montserrat', sans-serif
+  font-weight: 400
+  overflow-x: hidden
+  color: #333
+  input, textarea
+    border: #666 1px solid
+    outline: none
+    &:focus:required:invalid
+      border-color: red
+    &:required:valid
+      border-color: green
+.site-content 
+  position: relative
+// slick
+.slick-dotted.slick-slider
+  margin-bottom: 30px
+
+.offer-list-content
+  width: 40%
+.slick-dots
+  display: block
+  width: 100%
+  padding: 0
+  margin: 0
+  list-style: none
+  text-align: center
+.slick-dots li
+  position: relative
+  display: inline-block
+  width: 20px
+  height: 20px
+  margin: 0 3px
+  padding: 0
+  cursor: pointer
+.slick-dots li button
+  font-size: 0
+  line-height: 0
+  display: block
+  width: 20px
+  height: 20px
+  padding: 5px
+  cursor: pointer
+  color: transparent
+  border: 0
+  outline: none
+  background: transparent
+.slick-dots li button:hover,
+.slick-dots li button:focus
+  outline: none
+.slick-dots li button:hover:before,
+.slick-dots li button:focus:before
+  opacity: 1
+.slick-dots li button:before
+  font-family: 'slick'
+  font-size: 60px
+  line-height: 20px
+  position: absolute
+  top: 0
+  left: 0
+  width: 20px
+  height: 20px
+  content: '•'
+  text-align: center
+  opacity: .25
+  color: #E1E1E1
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+.slick-dots li.slick-active button:before
+  opacity: 1
+  color: #AFAFAF
+
+
+::placeholder
+  color: #666
+
+::selection
+  background-color: $accent
+  color: #fff
