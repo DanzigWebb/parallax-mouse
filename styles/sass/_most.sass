@@ -14,14 +14,16 @@ body
       border-color: red
     &:required:valid
       border-color: green
-.site-content 
-  position: relative
+
+.def-link
+  transition: $anim
+  &:hover
+    text-decoration: none
+
+
 // slick
 .slick-dotted.slick-slider
   margin-bottom: 30px
-
-.offer-list-content
-  width: 40%
 .slick-dots
   display: block
   width: 100%
@@ -81,3 +83,55 @@ body
 ::selection
   background-color: $accent
   color: #fff
+
+
+// button animation
+ //button
+.header-menu-button
+  width: 40px
+  height: 37px
+  margin: 5px
+  display: flex
+  justify-content: center
+  align-items: center
+  cursor: pointer
+  overflow: hidden
+  background-color: $accent
+  background-image: url(../../img/grunge_bg_light.png)
+  border-radius: 5px
+  span
+    width: 30px
+    height: 2px
+    background-color: #fff
+    position: relative
+    z-index: -1
+    transition: .2s
+    animation-name: slide
+    z-index: 10
+    &:after
+      content: ''
+      width: 30px
+      height: 2px
+      background-color: #fff
+      position: absolute
+      top: -8px
+      transition: .2s
+    &:before
+      content: ''
+      width: 30px
+      height: 2px
+      background-color: #fff
+      position: absolute
+      bottom: -8px
+      transition: bottom .2s ease .5s
+  &.is-active
+    span
+      background-color: transparent
+    span:before
+      bottom: 0
+      transform: rotate(315deg)
+      transition: transform .2s ease .3s, bottom .3s ease 0s
+    span:after
+      top: 0
+      transform: rotate(-315deg)
+      transition: transform .5s ease .3s, top .3s ease 0s

@@ -1,5 +1,5 @@
 @import "vars"
-@import "fonts"
+@import "libs"
 @import "scene"
 @import "most"
 
@@ -9,12 +9,11 @@
   &-logo
     padding: 20px 10px
     display: flex
-    justify-content: space-between
     align-items: center
+    justify-content: center
     max-width: 900px
     margin: auto
     position: relative
-    img
     p
       color: #fff
       text-transform: uppercase
@@ -24,6 +23,38 @@
       &:first-child
         text-align: right
 
+.header-menu
+  display: flex
+  font-family: 'Oswald', sans-serif
+  &-wrap
+    margin: 50px 0
+    display: flex
+    justify-content: space-between
+    align-items: center
+    border: 30px solid transparent
+    border-image-source: url(../../img/navbar_border.png)
+    border-image-slice: 30
+    border-image-repeat: repeat
+  &-link-wrap
+    padding: 5px 15px
+    padding-left: 25px
+    list-style: none
+    background-image: url(../../img/border_vertical.png) 
+    background-repeat: repeat-y
+    &:first-child
+      background-image: none
+  &__link
+    text-transform: uppercase
+    text-decoration: none
+    font-weight: 300
+    color: #fff
+    &.is-active
+      color: $accent
+      &:hover
+        color: $accent
+    &:hover
+      color: rgba(255, 255, 255, 0.4)
+ 
 
 
 // bottom
