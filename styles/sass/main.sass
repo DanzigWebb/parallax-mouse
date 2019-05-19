@@ -1,6 +1,7 @@
 @import "vars"
 @import "libs"
 @import "scene"
+@import "marchMenu"
 @import "most"
 
 // custom code
@@ -26,6 +27,8 @@
 .header-menu
   display: flex
   font-family: 'Oswald', sans-serif
+  +media-breakpoint-down(sm)
+    display: none
   &-wrap
     margin: 50px 0
     display: flex
@@ -35,6 +38,8 @@
     border-image-source: url(../../img/navbar_border.png)
     border-image-slice: 30
     border-image-repeat: repeat
+    +media-breakpoint-down(sm)
+      justify-content: flex-end
   &-link-wrap
     padding: 5px 15px
     padding-left: 25px

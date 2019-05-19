@@ -1,12 +1,15 @@
-body
+
+.site-body
   font-size: 20px
   margin: auto
   position: relative
   line-height: 1.35
   font-family: 'Montserrat', sans-serif
   font-weight: 400
+  width: 100 wh
   overflow-x: hidden
   color: #333
+  width: 100%
   input, textarea
     border: #666 1px solid
     outline: none
@@ -20,6 +23,19 @@ body
   &:hover
     text-decoration: none
 
+#site-content
+  &:before
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background: transparent
+    height: 100vh
+    display: block
+    transition: background .4s ease .3s
+    z-index: -1
 
 // slick
 .slick-dotted.slick-slider
