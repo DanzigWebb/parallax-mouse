@@ -2483,7 +2483,10 @@ html {
 
 .march-menu {
   position: fixed;
-  right: -400px;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin-right: -400px;
   background-color: #fff;
   width: 400px;
   z-index: 200;
@@ -2507,7 +2510,7 @@ html {
 
 @media (max-width: 575.98px) {
   .march-menu {
-    right: -320px;
+    margin-right: -320px;
     width: 320px;
   }
 }
@@ -2627,8 +2630,6 @@ html {
 }
 
 .site-body {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   overflow: hidden;
@@ -2638,6 +2639,7 @@ html {
   -webkit-transform: translateX(-400px);
           transform: translateX(-400px);
   overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 @media (max-width: 575.98px) {

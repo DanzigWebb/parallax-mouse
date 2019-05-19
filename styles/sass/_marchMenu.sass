@@ -1,8 +1,12 @@
+
 $menu-width: 400px
 $menu-width-mob: 320px
 .march-menu
   position: fixed
-  right: -$menu-width
+  top: 0
+  bottom: 0
+  right: 0
+  margin-right: -$menu-width
   background-color: #fff
   width: $menu-width
   z-index: 200
@@ -15,7 +19,7 @@ $menu-width-mob: 320px
   overflow: auto
   padding: 20px 0
   +media-breakpoint-down(xs)
-    right: -$menu-width-mob
+    margin-right: -$menu-width-mob
     width: $menu-width-mob
   // avatar
   &-avatar
@@ -96,12 +100,12 @@ $menu-width-mob: 320px
       text-decoration: none
 
 .site-body
-  transform: translateX(0)
   transition: $anim
   overflow: hidden
 .site-body.is-active
   transform: translateX(-$menu-width)
   overflow-y: hidden
+  overflow-x: hidden
   +media-breakpoint-down(xs)
     transform: translateX(-$menu-width-mob)
   #site-content:before
