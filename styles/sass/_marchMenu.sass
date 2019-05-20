@@ -18,9 +18,13 @@ $menu-width-mob: 320px
   justify-content: flex-start
   overflow: auto
   padding: 20px 0
+  ul
+    margin: 0
+    padding-left: 40px
   +media-breakpoint-down(xs)
     margin-right: -$menu-width-mob
     width: $menu-width-mob
+    
   // avatar
   &-avatar
     max-width: 50%
@@ -117,7 +121,7 @@ $menu-width-mob: 320px
     bottom: 0
     background: rgba(0, 0, 0, 0.7)
     z-index: 20
-    overflow: hidden
+    overflow-y: hidden
     height: 100vh
     display: block
     transition: background .4s ease .3s
