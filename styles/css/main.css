@@ -2485,8 +2485,7 @@ html {
   position: fixed;
   top: 0;
   bottom: 0;
-  right: 0;
-  margin-right: -400px;
+  right: -400px;
   background-color: #fff;
   width: 400px;
   z-index: 200;
@@ -2506,6 +2505,13 @@ html {
           justify-content: flex-start;
   overflow: auto;
   padding: 20px 0;
+  overflow-x: hidden;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.march-menu.is-active {
+  right: 0;
 }
 
 .march-menu ul {
@@ -2515,7 +2521,7 @@ html {
 
 @media (max-width: 575.98px) {
   .march-menu {
-    margin-right: -320px;
+    right: -320px;
     width: 320px;
   }
 }
@@ -2637,24 +2643,26 @@ html {
 .site-body {
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
-  overflow: hidden;
 }
 
-.site-body.is-active {
+#site-content {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#site-content.is-active {
   -webkit-transform: translateX(-400px);
           transform: translateX(-400px);
-  overflow-y: hidden;
-  overflow-x: hidden;
 }
 
 @media (max-width: 575.98px) {
-  .site-body.is-active {
+  #site-content.is-active {
     -webkit-transform: translateX(-320px);
             transform: translateX(-320px);
   }
 }
 
-.site-body.is-active #site-content:before {
+#site-content.is-active:before {
   content: '';
   position: absolute;
   top: 0;
@@ -2663,7 +2671,6 @@ html {
   bottom: 0;
   background: rgba(0, 0, 0, 0.7);
   z-index: 20;
-  overflow-y: hidden;
   height: 100vh;
   display: block;
   -webkit-transition: background .4s ease .3s;

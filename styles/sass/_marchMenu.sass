@@ -5,8 +5,7 @@ $menu-width-mob: 320px
   position: fixed
   top: 0
   bottom: 0
-  right: 0
-  margin-right: -$menu-width
+  right: -$menu-width
   background-color: #fff
   width: $menu-width
   z-index: 200
@@ -18,13 +17,16 @@ $menu-width-mob: 320px
   justify-content: flex-start
   overflow: auto
   padding: 20px 0
+  overflow-x: hidden
+  transition: $anim
+  &.is-active
+    right: 0
   ul
     margin: 0
     padding-left: 40px
   +media-breakpoint-down(xs)
-    margin-right: -$menu-width-mob
+    right: -$menu-width-mob
     width: $menu-width-mob
-    
   // avatar
   &-avatar
     max-width: 50%
@@ -105,24 +107,22 @@ $menu-width-mob: 320px
 
 .site-body
   transition: $anim
-  overflow: hidden
-.site-body.is-active
-  transform: translateX(-$menu-width)
-  overflow-y: hidden
-  overflow-x: hidden
-  +media-breakpoint-down(xs)
-    transform: translateX(-$menu-width-mob)
-  #site-content:before
-    content: ''
-    position: absolute
-    top: 0
-    left: 0
-    right: 0
-    bottom: 0
-    background: rgba(0, 0, 0, 0.7)
-    z-index: 20
-    overflow-y: hidden
-    height: 100vh
-    display: block
-    transition: background .4s ease .3s
 
+#site-content
+  transition: $anim
+  &.is-active
+    transform: translateX(-$menu-width)
+    +media-breakpoint-down(xs)
+      transform: translateX(-$menu-width-mob)
+#site-content.is-active:before
+  content: ''
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  background: rgba(0, 0, 0, 0.7)
+  z-index: 20
+  height: 100vh
+  display: block
+  transition: background .4s ease .3s

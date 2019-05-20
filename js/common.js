@@ -21,12 +21,11 @@ function openSiderbar() {
 	let linkWrap = marchMenu.querySelectorAll('.march-menu-link-wrap');
 	let MenuLink = marchMenu.querySelectorAll('.march-menu__link');
 	let sublinkWrap = marchMenu.querySelectorAll('.march-menu-subwrap');
-	let body = document.querySelector('.site-body');
 	let siteContent = document.getElementById('site-content');
 	headerButton.addEventListener('click', function (e) {
 		this.classList.toggle('is-active');
 		marchMenu.classList.toggle('is-active');
-		body.classList.toggle('is-active');
+		siteContent.classList.toggle('is-active');
 	});
 
 
@@ -35,25 +34,18 @@ function openSiderbar() {
 	});
 
 
-	// linkWrap.forEach(item => {
-	// 	if(item.classList.contains('has-children')) {
-	// 		let button = document.createElement('button')
-	// 		button.classList.add('march-menu-button')
-	// 		item.appendChild(button)
-	// 	}
-	// });
 
 	document.addEventListener('click', function (e) {
 		if (e.target == siteContent) {
 			headerButton.classList.remove('is-active')
 			marchMenu.classList.remove('is-active');
-			body.classList.remove('is-active');
+			siteContent.classList.remove('is-active');
 		}
 			MenuLink.forEach(link => {
 				if (e.target == link) {
 					headerButton.classList.remove('is-active')
 					marchMenu.classList.remove('is-active');
-					body.classList.remove('is-active');
+					siteContent.classList.remove('is-active');
 				}
 			});
 		
