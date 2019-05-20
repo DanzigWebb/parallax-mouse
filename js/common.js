@@ -19,7 +19,7 @@ function openSiderbar() {
 	let headerButton = document.querySelector('.header-menu-button');
 	let marchMenu = document.querySelector('.march-menu');
 	let linkWrap = marchMenu.querySelectorAll('.march-menu-link-wrap');
-	let MenuLink = marchMenu.querySelectorAll('.march-menu__link');
+	let menuLink = marchMenu.querySelectorAll('.march-menu__link');
 	let sublinkWrap = marchMenu.querySelectorAll('.march-menu-subwrap');
 	let siteContent = document.getElementById('site-content');
 	headerButton.addEventListener('click', function (e) {
@@ -30,7 +30,10 @@ function openSiderbar() {
 
 
 	sublinkWrap.forEach(item => {
-		item.parentElement.classList.add("has-children");
+		item.parentElement.classList.add('has-children');
+		let linkButton = document.createElement('button');
+		linkButton.className = "march-link-button";
+		item.parentElement.appendChild(linkButton);
 	});
 
 
@@ -41,7 +44,7 @@ function openSiderbar() {
 			marchMenu.classList.remove('is-active');
 			siteContent.classList.remove('is-active');
 		}
-			MenuLink.forEach(link => {
+			menuLink.forEach(link => {
 				if (e.target == link) {
 					headerButton.classList.remove('is-active')
 					marchMenu.classList.remove('is-active');

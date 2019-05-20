@@ -62,6 +62,7 @@ $menu-width-mob: 320px
     display: block
     cursor: pointer
     transition: $anim
+    position: relative
   &__link
     color: #222
     display: block
@@ -126,3 +127,21 @@ $menu-width-mob: 320px
   height: 100vh
   display: block
   transition: background .4s ease .3s
+
+
+// button end sublinks
+
+.march-link-button
+  position: absolute
+  right: 0
+  top: 0
+  height: 37px
+  width: 37px
+  padding: 0
+  border: none
+  background-color: $accent
+  cursor: pointer
+.march-menu
+  &-subwrap
+    height: 0
+    overflow: hidden
