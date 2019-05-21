@@ -37,7 +37,6 @@ function openSiderbar() {
 		item.parentElement.appendChild(newButton);
 	});
 
-	let
 
 	document.addEventListener('click', function (e) {
 		if (e.target == siteContent) {
