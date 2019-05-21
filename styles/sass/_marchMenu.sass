@@ -136,11 +136,28 @@ $menu-width-mob: 320px
   right: 0
   top: 0
   height: 37px
-  width: 37px
+  width: 60px
   padding: 0
   border: none
-  background-color: $accent
   cursor: pointer
+  background-color: #fff
+  font-size: 16px
+  color: $accent
+  display: flex
+  justify-content: center
+  align-items: center
+  transition: .6s
+  box-shadow: -2px 0px 2px 0px rgba(0, 0, 0, 0.15)
+  +media-breakpoint-down(xs)
+    width: 80px
+  .fas
+    transform: rotate(-90deg)
+    color: rgba(0, 0, 0, 0.15)
+    transition: 1s
+  &:hover
+    box-shadow: -2px 0px 2px 0px rgba(0, 0, 0, 0.23)
+    .fas
+      color: $accent
 .march-menu
   &-subwrap
     height: 0

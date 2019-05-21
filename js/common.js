@@ -31,12 +31,13 @@ function openSiderbar() {
 
 	sublinkWrap.forEach(item => {
 		item.parentElement.classList.add('has-children');
-		let linkButton = document.createElement('button');
-		linkButton.className = "march-link-button";
-		item.parentElement.appendChild(linkButton);
+		let newButton = document.createElement('button');
+		newButton.innerHTML = `<i class="fas fa-arrow-up"></i>`
+		newButton.className = "march-link-button";
+		item.parentElement.appendChild(newButton);
 	});
 
-
+	let
 
 	document.addEventListener('click', function (e) {
 		if (e.target == siteContent) {
@@ -44,18 +45,17 @@ function openSiderbar() {
 			marchMenu.classList.remove('is-active');
 			siteContent.classList.remove('is-active');
 		}
-			menuLink.forEach(link => {
-				if (e.target == link) {
-					headerButton.classList.remove('is-active')
-					marchMenu.classList.remove('is-active');
-					siteContent.classList.remove('is-active');
-				}
-			});
+		menuLink.forEach(link => {
+			if (e.target == link) {
+				headerButton.classList.remove('is-active')
+				marchMenu.classList.remove('is-active');
+				siteContent.classList.remove('is-active');
+			}
+		});
 		
 
 	});
 
-	
 
 
 }
