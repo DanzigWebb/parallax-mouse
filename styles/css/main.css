@@ -2729,8 +2729,16 @@ html {
 }
 
 .march-menu-subwrap {
-  height: 0;
   overflow: hidden;
+  -webkit-transition: .4s;
+  transition: .4s;
+  height: 0;
+}
+
+.march-link-button.is-active .fas {
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+  color: #f2726b;
 }
 
 .site-body {

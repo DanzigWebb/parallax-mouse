@@ -158,7 +158,19 @@ $menu-width-mob: 320px
     box-shadow: -2px 0px 2px 0px rgba(0, 0, 0, 0.23)
     .fas
       color: $accent
+
+
 .march-menu
   &-subwrap
-    height: 0
     overflow: hidden
+    transition: .4s
+    height: 0
+
+
+.march-link-button.is-active
+  .fas
+    transform: rotate(-180deg)
+    color: $accent
+
+// .march-menu-subwrap.is-active
+//   height: 50px
