@@ -2703,6 +2703,7 @@ html {
   transition: .6s;
   -webkit-box-shadow: -2px 0px 2px 0px rgba(0, 0, 0, 0.15);
           box-shadow: -2px 0px 2px 0px rgba(0, 0, 0, 0.15);
+  outline: none;
 }
 
 @media (max-width: 575.98px) {
