@@ -109,10 +109,14 @@ $menu-width-mob: 320px
 .site-body
   transition: $anim
 
+.allwrap
+  transition: .4s
+
 #site-content
   transition: $anim
   &.is-active
     transform: translateX(-$menu-width)
+    filter: brightness(0.4)
     +media-breakpoint-down(xs)
       transform: translateX(-$menu-width-mob)
 

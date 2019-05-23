@@ -2648,6 +2648,11 @@ html {
   transition: all 0.5s ease;
 }
 
+.allwrap {
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
 #site-content {
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
@@ -2656,6 +2661,8 @@ html {
 #site-content.is-active {
   -webkit-transform: translateX(-400px);
           transform: translateX(-400px);
+  -webkit-filter: brightness(0.4);
+          filter: brightness(0.4);
 }
 
 @media (max-width: 575.98px) {
