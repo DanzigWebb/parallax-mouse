@@ -2770,27 +2770,75 @@ html {
   text-decoration: none;
 }
 
-#site-content:before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: transparent;
-  height: 100%;
-  display: block;
-  -webkit-transition: background .4s ease .3s;
-  transition: background .4s ease .3s;
-  z-index: -1;
+.site-link {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  color: #f2726b;
 }
 
-#site-content.is-active:before {
-  -webkit-filter: brightness(0.4);
-          filter: brightness(0.4);
-  z-index: 99;
-  -webkit-transition-delay: 0;
-          transition-delay: 0;
+.site-link:hover {
+  text-decoration: none;
+  color: #954a46;
+}
+
+.main-btn {
+  min-height: 55px;
+  padding: 0 33px;
+  height: 55px;
+  font-size: 17px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #da6931;
+  color: #ffffff;
+  background-image: url(../../img/grunge_bg_light.png);
+  margin: 0;
+  border: none;
+  overflow: visible;
+  color: #ffffff;
+  text-transform: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 1rem;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 7px;
+  background-position: 0 0;
+  background-repeat: repeat;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.main-btn:hover {
+  color: #fff;
+  background-color: #d56026;
+  text-decoration: none;
+  -webkit-box-shadow: 0 1px 7px rgba(0, 0, 0, 0.6) inset;
+          box-shadow: 0 1px 7px rgba(0, 0, 0, 0.6) inset;
+}
+
+.main-btn--dark {
+  background-color: #4a4a4a;
+}
+
+.main-btn--dark:hover {
+  background-color: #424242;
+}
+
+.title-2 {
+  font-size: 48px;
+  line-height: 52px;
+  margin: 0 0 15px 0;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+  color: #444444;
+}
+
+.heading {
+  margin: 15px 0;
 }
 
 .slick-dotted.slick-slider {
@@ -3076,6 +3124,8 @@ html {
   border-image-slice: 30;
   border-image-repeat: repeat;
   background-clip: padding-box;
+  margin-bottom: 30px;
+  padding: 10px;
 }
 
 .s-main-header {
@@ -3135,6 +3185,39 @@ html {
   text-align: center;
   max-width: 75%;
   margin: auto;
+}
+
+.s-main-buttons {
+  margin: 25px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.s-main-buttons a {
+  margin: 0 10px;
+}
+
+.s-posts {
+  position: relative;
+}
+
+.s-posts img {
+  max-width: 100%;
+}
+
+.s-posts-heading {
+  font-size: 15px;
+  max-width: 90%;
+  padding-bottom: 40px;
+}
+
+.s-posts-heading a {
+  position: absolute;
+  bottom: 30px;
 }
 
 /*==========  Desktop First  ==========*/

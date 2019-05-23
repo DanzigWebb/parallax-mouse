@@ -1,3 +1,6 @@
+/////////////////////////////////////////////////////////////
+// body
+/////////////////////////////////////////////////////////////
 
 .site-body
   font-size: 16px
@@ -17,32 +20,71 @@
     &:required:valid
       border-color: green
 
+/////////////////////////////////////////////////////////////
+// links and buttons
+/////////////////////////////////////////////////////////////
+
 .def-link
   transition: $anim
   &:hover
     text-decoration: none
+.site-link
+  transition: $anim
+  color: $accent
+  &:hover
+    text-decoration: none
+    color: #954a46
+.main-btn
+  min-height: 55px
+  padding: 0 33px
+  height: 55px
+  font-size: 17px
+  display: flex
+  align-items: center
+  background-color: #da6931
+  color: #ffffff
+  background-image: url(../../img/grunge_bg_light.png)  
+  margin: 0
+  border: none
+  overflow: visible
+  color: #ffffff
+  text-transform: none
+  box-sizing: border-box
+  font-size: 1rem
+  text-decoration: none
+  text-align: center
+  border-radius: 7px
+  background-position: 0 0
+  background-repeat: repeat
+  transition: all 0.2s ease-in-out
+  &:hover
+    color: #fff
+    background-color: #d56026
+    text-decoration: none
+    box-shadow: 0 1px 7px rgba(0, 0, 0, 0.6) inset
+  &--dark
+    background-color: #4a4a4a
+    &:hover
+      background-color: #424242
+/////////////////////////////////////////////////////////////
+// typograf
+/////////////////////////////////////////////////////////////
 
-#site-content
-  &:before
-    content: ''
-    position: fixed
-    top: 0
-    left: 0
-    right: 0
-    bottom: 0
-    background: transparent
-    height: 100%
-    display: block
-    transition: background .4s ease .3s
-    z-index: -1
-#site-content.is-active
+.title-2
+  font-size: 48px
+  line-height: 52px
+  margin: 0 0 15px 0
+  font-family: 'Oswald', sans-serif
+  font-weight: 300
+  color: #444444
 
-  &:before
-    filter: brightness(0.4)
-    z-index: 99
-    transition-delay: 0
+.heading
+  margin: 15px 0
 
+/////////////////////////////////////////////////////////////
 // slick
+/////////////////////////////////////////////////////////////
+
 .slick-dotted.slick-slider
   margin-bottom: 30px
 .slick-dots
