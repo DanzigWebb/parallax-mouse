@@ -5,9 +5,11 @@
     left: 0
     right: 0
     bottom: 0
-    height: 100vh
     z-index: -1
     overflow: hidden
+    height: 100%
+    min-height: 100vh
+    transition: .3s
 .scene
   overflow: hidden
   &-layer
@@ -23,7 +25,7 @@
     &--font2
       background-image: url(../../img/parallax_layer1.png)
       background-position: top center
-      top: 0
+
     &--font3
       background-image: url(../../img/parallax_layer2.png)
       width: 115%

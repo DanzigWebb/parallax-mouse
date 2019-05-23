@@ -15,7 +15,7 @@ function openSiderbar() {
 
 	let headerButton = document.querySelector('.header-menu-button');
 	let marchMenu = document.querySelector('.march-menu');
-	let linkWrap = marchMenu.querySelectorAll('.march-menu-link-wrap');
+	let body = document.querySelector('.site-body');
 	let menuLink = marchMenu.querySelectorAll('.march-menu__link');
 	let sublinkWrap = marchMenu.querySelectorAll('.march-menu-subwrap');
 	let siteContent = document.getElementById('site-content');
@@ -25,6 +25,7 @@ function openSiderbar() {
 		this.classList.toggle('is-active');
 		marchMenu.classList.toggle('is-active');
 		siteContent.classList.toggle('is-active');
+		// body.style.filter = 'brightness(0.4)'
 	});
 
 	// создание кнопки при наличии вложенного списка ссылок
