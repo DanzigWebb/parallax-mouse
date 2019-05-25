@@ -138,8 +138,6 @@
     display: flex
     justify-content: center
     padding-bottom: 30px
-    +media-breakpoint-down(xs)
-      display: none
     &-wrap
       display: flex
       margin: 0
@@ -272,6 +270,8 @@
   top: 400px
   width: 100%
   z-index: 1
+  +media-breakpoint-down(xs)
+    top: 300px
   &__btn
     border: none
     background-color: $accent
@@ -288,8 +288,12 @@
       z-index: -1
     &-next
       right: -15px
+      +media-breakpoint-down(xs)
+        right: -5px
     &-prev
       left: -32px
+      +media-breakpoint-down(xs)
+        left: -25px
     &:hover
       background-color: #4a4a4a
 

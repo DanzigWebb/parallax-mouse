@@ -2864,7 +2864,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 575.98px) {
   .title-1 {
-    font-size: 55px;
+    font-size: 50px;
     line-height: 65px;
   }
 }
@@ -3339,12 +3339,6 @@ p {
   padding-bottom: 30px;
 }
 
-@media (max-width: 575.98px) {
-  .s-about-tabs {
-    display: none;
-  }
-}
-
 .s-about-tabs-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3563,6 +3557,12 @@ p {
   z-index: 1;
 }
 
+@media (max-width: 575.98px) {
+  .s-about-arrows {
+    top: 300px;
+  }
+}
+
 .s-about-arrows__btn {
   border: none;
   background-color: #f2726b;
@@ -3586,8 +3586,20 @@ p {
   right: -15px;
 }
 
+@media (max-width: 575.98px) {
+  .s-about-arrows__btn-next {
+    right: -5px;
+  }
+}
+
 .s-about-arrows__btn-prev {
   left: -32px;
+}
+
+@media (max-width: 575.98px) {
+  .s-about-arrows__btn-prev {
+    left: -25px;
+  }
 }
 
 .s-about-arrows__btn:hover {

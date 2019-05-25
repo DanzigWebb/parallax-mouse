@@ -181,7 +181,6 @@ let aboutOpens = function () {
 					moveSlider (btnNumber)
 			}
 		}
-
 		
 	})
 
