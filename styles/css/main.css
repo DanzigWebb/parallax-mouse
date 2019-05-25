@@ -2859,11 +2859,13 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 900;
   text-align: center;
   margin: 30px 0;
+  line-height: 95px;
 }
 
 @media (max-width: 575.98px) {
   .title-1 {
-    font-size: 60px;
+    font-size: 55px;
+    line-height: 65px;
   }
 }
 
@@ -3122,6 +3124,12 @@ p {
   position: relative;
 }
 
+@media (max-width: 575.98px) {
+  .header-logo {
+    display: none;
+  }
+}
+
 .header-logo p {
   color: #fff;
   text-transform: uppercase;
@@ -3223,14 +3231,7 @@ p {
 }
 
 .s-main-header {
-  padding-top: 50px;
-  max-width: 80%;
-  margin: auto;
-}
-
-.s-main-header img {
-  width: 100%;
-  margin: auto;
+  height: auto;
 }
 
 .s-main-headerbrd {
@@ -3297,7 +3298,7 @@ p {
 }
 
 .s-main-buttons a {
-  margin: 0 10px;
+  margin: 0 5px;
 }
 
 .s-posts {
@@ -3325,21 +3326,13 @@ p {
 }
 
 .s-about-tabs {
-  position: absolute;
-  left: -45px;
-  width: 110px;
-  top: 130px;
-  bottom: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding-bottom: 30px;
 }
 
 @media (max-width: 575.98px) {
@@ -3349,6 +3342,9 @@ p {
 }
 
 .s-about-tabs-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -3363,7 +3359,7 @@ p {
   height: 40px;
   background-image: url(../../img/grunge_bg_light.png);
   background-color: #4a4a4a;
-  margin-bottom: 10px;
+  margin: 0 10px;
   position: relative;
   cursor: pointer;
   -webkit-transition: all 0.5s ease;
@@ -3385,20 +3381,7 @@ p {
 }
 
 .s-about-content {
-  margin-left: 90px;
-  padding: 10px;
-}
-
-@media (max-width: 991.98px) {
-  .s-about-content {
-    margin-left: 30px;
-  }
-}
-
-@media (max-width: 575.98px) {
-  .s-about-content {
-    margin-left: 0;
-  }
+  padding: 30px 0;
 }
 
 .s-about-content-services {
@@ -3437,6 +3420,13 @@ p {
   margin-bottom: 20px;
 }
 
+@media (max-width: 575.98px) {
+  .aboutme-services-item {
+    max-width: 70%;
+    margin: auto;
+  }
+}
+
 .aboutme-facts-item {
   text-align: center;
   padding: 20px 10px 15px;
@@ -3462,6 +3452,91 @@ p {
   font-size: 24px;
   color: #f2726b;
   font-weight: 600;
+}
+
+.s-about-resume-content {
+  margin: 20px 0;
+}
+
+@media (max-width: 575.98px) {
+  .resume .title-4 {
+    margin-bottom: 40px;
+  }
+}
+
+.resume-column {
+  margin-top: 30px;
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-rows: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+}
+
+@media (max-width: 1199.98px) {
+  .resume-column {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .resume-column {
+    grid-row-gap: 10px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .resume-column {
+    grid-auto-flow: row;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+    grid-row-gap: 20px;
+  }
+}
+
+.resume-column-title {
+  grid-area: title;
+}
+
+.resume-item p {
+  max-width: 80%;
+}
+
+@media (max-width: 991.98px) {
+  .resume-item p {
+    max-width: 95%;
+  }
+}
+
+.resume-date {
+  display: block;
+  max-width: 90px;
+  position: relative;
+  color: #fff;
+  font-weight: 600;
+  line-height: 1.1em;
+  margin: 0 0 10px;
+  background-color: #f2726b;
+  background-image: url(../../img/grunge_bg_light.png);
+  padding: 5px 8px 5px 23px;
+  margin-left: -23px;
+}
+
+.resume-title {
+  margin: 0;
+}
+
+.resume__descr {
+  color: #a5a5a5;
+  margin: 0 0 10px;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 1.45em;
 }
 
 /*==========  Desktop First  ==========*/

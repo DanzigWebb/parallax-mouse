@@ -16,6 +16,8 @@
     max-width: 900px
     margin: auto
     position: relative
+    +media-breakpoint-down(xs)
+      display: none
     p
       color: #fff
       text-transform: uppercase
@@ -77,13 +79,7 @@
 .s-main
 
   &-header
-    padding-top: 50px
-    max-width: 80%
-    margin: auto
-    img
-      width: 100%
-      margin: auto
-
+    height: auto
   &-headerbrd
     height: 60px
     width: 95%
@@ -118,7 +114,7 @@
     display: flex
     justify-content: center
     a
-      margin: 0 10px
+      margin: 0 5px
 .s-posts
   position: relative
   img
@@ -137,17 +133,13 @@
   min-height: 400px
   position: relative
   &-tabs
-    position: absolute
-    left: -45px
-    width: 110px
-    top: 130px
-    bottom: 0
     display: flex
-    flex-direction: column
     justify-content: center
+    padding-bottom: 30px
     +media-breakpoint-down(xs)
       display: none
     &-wrap
+      display: flex
       margin: 0
       padding: 0
       list-style: none
@@ -160,7 +152,7 @@
       height: 40px
       background-image: url(../../img/grunge_bg_light.png)
       background-color: #4a4a4a
-      margin-bottom: 10px
+      margin: 0 10px
       position: relative
       cursor: pointer
       transition: $anim
@@ -173,12 +165,7 @@
         box-shadow: 0px 4px 0px 0px rgba(239, 80, 71, 0.5)
 
   &-content
-    margin-left: 90px
-    padding: 10px
-    +media-breakpoint-down(md)
-      margin-left: 30px
-    +media-breakpoint-down(xs)
-      margin-left: 0
+    padding: 30px 0
     &-services
       margin: 25px 0
     &-txtwrap
@@ -197,7 +184,10 @@
   img
     max-height: 74px
     margin-bottom: $gutter
-
+  p
+  +media-breakpoint-down(xs)
+    max-width: 70%
+    margin: auto
 .aboutme-facts-item
   text-align: center
   padding: 20px 10px 15px
@@ -216,6 +206,54 @@
   font-weight: 600
 
 
+.s-about-resume-content
+  margin: 20px 0
+// resume
+.resume
+  .title-4
+    +media-breakpoint-down(xs)
+      margin-bottom: 2*$gutter
+.resume-column
+  margin-top: 30px
+  display: grid
+  grid-auto-flow: column
+  align-items: center
+  grid-template-rows: 1fr 1fr 1fr
+  +media-breakpoint-down(lg)
+    align-items: flex-start
+  +media-breakpoint-down(sm)
+    grid-row-gap: 10px
+  +media-breakpoint-down(xs)
+    grid-auto-flow: row
+    grid-template-rows: 1fr
+    grid-row-gap: 20px
+.resume-column-title
+  grid-area: title
+.resume-item
+  p
+    max-width: 80%
+    +media-breakpoint-down(md)
+      max-width: 95%
+.resume-date
+  display: block
+  max-width: 90px
+  position: relative
+  color: #fff
+  font-weight: 600
+  line-height: 1.1em
+  margin: 0 0 10px
+  background-color: $accent
+  background-image: url(../../img/grunge_bg_light.png)
+  padding: 5px 8px 5px 23px
+  margin-left: -23px
+.resume-title
+  margin: 0
+.resume__descr
+  color: #a5a5a5
+  margin: 0 0 10px
+  font-size: 12px
+  font-weight: 300
+  line-height: 1.45em
 // bottom
 
 @import "media"
