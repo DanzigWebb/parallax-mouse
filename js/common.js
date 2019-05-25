@@ -113,11 +113,6 @@ let aboutOpens = function () {
 	}
 	getPosition()
 
-	window.addEventListener(`resize`, e => {
-		getPosition()
-	}, false);
-
-
 	let removeActiveButton = function (arrButtons) {
 		arrButtons.forEach(item => {
 			item.classList.remove('is-active');
@@ -129,12 +124,25 @@ let aboutOpens = function () {
 		aboutContent.style.height = `${aboutItem[number].offsetHeight}px`;
 	}
 
+	window.addEventListener(`resize`, e => {
+		getPosition();
+		if (window.innerWidth >= 1200) {
+			aboutContent.style.transform = moveSlider (0);
+		} else if (window.innerWidth >= 992) {
+			moveSlider (0);
+		} else if (window.innerWidth >= 768) {
+			moveSlider (0);
+		} else if (window.innerWidth >= 576) {
+			moveSlider (0);
+		}
+	}, false);
+
 
 	// логика переключателя
 	aboutSection.addEventListener('click', function (e) {
-
+		
 		let btnNumber = 0;
-
+		
 		aboutBtn.forEach(function (btn, i, btnArr) {
 			// логика кнопок
 			if (e.target == btn) {
@@ -156,6 +164,7 @@ let aboutOpens = function () {
 		aboutItem[btnNumber].classList.add('is-active');
 
 		if (e.target == btnNext) {
+			
 			if (btnNumber < 2) { 
 				removeActiveButton(aboutBtn);
 				aboutBtn[btnNumber].nextElementSibling.classList.add('is-active');
@@ -165,6 +174,11 @@ let aboutOpens = function () {
 					}
 				})
 				moveSlider (btnNumber)
+			}
+			else  {
+				removeActiveButton(aboutBtn);
+				aboutBtn[0].classList.add('is-active');
+				moveSlider (0)
 			}
 
 		}
@@ -179,6 +193,11 @@ let aboutOpens = function () {
 					}
 				})
 					moveSlider (btnNumber)
+			}
+			else  {
+				removeActiveButton(aboutBtn);
+				aboutBtn[2].classList.add('is-active');
+				moveSlider (2)
 			}
 		}
 		

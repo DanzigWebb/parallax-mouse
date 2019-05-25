@@ -134,36 +134,6 @@
   position: relative
   &-hidden-fixed
     overflow: hidden
-  &-tabs
-    display: flex
-    justify-content: center
-    padding-bottom: 30px
-    &-wrap
-      display: flex
-      margin: 0
-      padding: 0
-      list-style: none
-      overflow: hidden
-    &__item
-      width: 100px
-      border: none
-      font-weight: 500
-      color: #fff
-      height: 40px
-      background-image: url(../../img/grunge_bg_light.png)
-      background-color: #4a4a4a
-      margin: 0 10px
-      position: relative
-      cursor: pointer
-      transition: $anim
-      &:hover
-        filter: none
-        background-color: $accent
-      &.is-active
-        background-color: $accent
-        filter: none
-        box-shadow: 0px 4px 0px 0px rgba(239, 80, 71, 0.5)
-
   &-content
     padding: 30px 0
     position: relative
@@ -264,7 +234,44 @@
   font-weight: 300
   line-height: 1.45em
 
+/////////////////////////////////////////////////////////////
+// about control
+/////////////////////////////////////////////////////////////
+.s-about-tabs
+  display: flex
+  justify-content: center
+  padding-bottom: 30px
+  +media-breakpoint-up(xl)
+    display: none
+  &-wrap
+    display: flex
+    margin: 0
+    padding: 0
+    list-style: none
+    overflow: hidden
+  &__item
+    width: 100px
+    border: none
+    font-weight: 500
+    color: #fff
+    height: 40px
+    background-image: url(../../img/grunge_bg_light.png)
+    background-color: #4a4a4a
+    margin: 0 10px
+    position: relative
+    cursor: pointer
+    transition: $anim
+    &:hover
+      filter: none
+      background-color: $accent
+    &.is-active
+      background-color: $accent
+      filter: none
+      box-shadow: 0px 4px 0px 0px rgba(239, 80, 71, 0.5)
 
+
+// arrows
+/////////////////////////////////////////////////////////////
 .s-about-arrows
   position: absolute
   top: 400px
@@ -272,6 +279,8 @@
   z-index: 1
   +media-breakpoint-down(xs)
     top: 300px
+  +media-breakpoint-up(xl)
+    display: none
   &__btn
     border: none
     background-color: $accent
@@ -283,6 +292,9 @@
     transition: $anim
     position: absolute
     z-index: 10
+    +media-breakpoint-down(sm)
+      width: 30px
+      height: 30px
     .fas
       position: relative
       z-index: -1
