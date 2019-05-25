@@ -1,7 +1,8 @@
 /////////////////////////////////////////////////////////////
 // body
 /////////////////////////////////////////////////////////////
-
+html
+  scroll-behavior: smooth
 .site-body
   font-size: 16px
   margin: auto
@@ -12,6 +13,7 @@
   overflow-x: hidden
   color: #333
   width: 100%
+  scroll-behavior: smooth
   input, textarea
     border: #666 1px solid
     outline: none
@@ -69,17 +71,69 @@
 /////////////////////////////////////////////////////////////
 // typograf
 /////////////////////////////////////////////////////////////
-
+h1, h2, h3, h4, h5, h6
+  font-family: 'Oswald', sans-serif
+.title-1
+  font-size: 90px
+  text-transform: uppercase
+  font-weight: 900
+  text-align: center
+  margin: 30px 0
+  +media-breakpoint-down(xs)
+    font-size: 60px
 .title-2
   font-size: 48px
   line-height: 52px
   margin: 0 0 15px 0
-  font-family: 'Oswald', sans-serif
   font-weight: 300
   color: #444444
 
+.title-4
+  font-size: 18px
+  font-weight: normal
+  margin-bottom: 15px
+
+.title-5
+  border-bottom: 2px solid #ffcd38
+  display: inline-block
+  font-weight: normal
+  padding-bottom: 2px
+  margin-bottom: 20px
+  font-size: 18px
+
+p
+  font-size: 14px
+  font-weight: 300
+  color: #666
+  margin: 0 0 10px
+
 .heading
   margin: 15px 0
+
+/////////////////////////////////////////////////////////////
+// up-button
+/////////////////////////////////////////////////////////////
+
+#up-button
+  position: fixed
+  bottom: 10px
+  right: 10px
+  opacity: 0
+  transition: $anim
+  z-index: 9999999
+  &:hover
+    opacity: 1
+  &.is-active
+    opacity: 0.4
+.up-button
+  &__btn
+    cursor: pointer
+    border-radius: 8px
+    border: none
+    background-color: $accent
+    color: #fff
+    padding: 13px
+  
 
 /////////////////////////////////////////////////////////////
 // slick

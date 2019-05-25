@@ -13,18 +13,19 @@ document.addEventListener('mousemove', parallax)
 
 function openSiderbar() {
 
-	let headerButton = document.querySelector('.header-menu-button');
-	let marchMenu = document.querySelector('.march-menu');
-	let back = document.querySelector('.body-scene');
+	let body = document.getElementById('my-body')
+	let headerButton = body.querySelector('.header-menu-button');
+	let marchMenu = body.querySelector('.march-menu');
+	let back = body.querySelector('.body-scene');
 	let menuLink = marchMenu.querySelectorAll('.march-menu__link');
 	let sublinkWrap = marchMenu.querySelectorAll('.march-menu-subwrap');
-	let siteContent = document.getElementById('site-content');
+	let siteContent = body.querySelector('#site-content');
 
 	// обработчик гамбургера
 	headerButton.addEventListener('click', function (e) {
 		this.classList.toggle('is-active');
 		marchMenu.classList.toggle('is-active');
-		siteContent.classList.toggle('is-active');
+		body.classList.toggle('is-active');
 		back.style.filter = 'brightness(0.4)'
 	});
 
@@ -46,7 +47,7 @@ function openSiderbar() {
 			if (e.target == link || e.target == siteContent) {
 				headerButton.classList.remove('is-active')
 				marchMenu.classList.remove('is-active');
-				siteContent.classList.remove('is-active');
+				body.classList.remove('is-active');
 				back.style.filter = ''
 			}
 		});
@@ -78,16 +79,27 @@ function openSiderbar() {
 
 openSiderbar()
 
-// for (let i = 0; i<button.length; i++) {
 
-// 	if (e.target == button[i] || e.target == button[i].childNodes[0]) {
-// 		for (let j = 0; j<button.length; j++) {
-// 			if (button[j].classList.contains('is-active') & sublinkWrap[j].style.heightscrollHeight) {
-// 				button[j].classList.remove(('is-active'))
-// 		}
-		
-// 		}
-// 		button[i].classList.toggle('is-active');
-// 		sublinkWrap[i].style.height = `${sublinkWrap[i].scrollHeight}px`
-// 	}
-// }
+
+window.addEventListener(`resize`, e => {
+  let scrollHeight = Math.max(
+		document.body.scrollHeight, document.documentElement.scrollHeight,
+		document.body.offsetHeight, document.documentElement.offsetHeight,
+		document.body.clientHeight, document.documentElement.clientHeight
+	);
+	
+	
+
+}, false);
+window.addEventListener('scroll', function() {
+	let upButton = document.querySelector('#up-button');
+	if (pageYOffset > 400) {
+		upButton.classList.add('is-active');
+	}
+	else {
+		upButton.classList.remove('is-active');
+	}
+	upButton.addEventListener('click', e => {
+		window.scrollTo(0,0)
+	})
+})

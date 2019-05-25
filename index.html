@@ -26,7 +26,7 @@
 
 </head>
 
-<body class="site-body">
+<body class="site-body" id="my-body">
 	<!-- menu -->
 	<div class="march-menu">
 		<div class="march-menu-avatar">
@@ -88,6 +88,12 @@
 		<div data-number="10" class="scene-layer scene-layer--font3"></div>
 	</div>
 	<!-- parallax-bg -->
+
+	<!-- up-button -->
+		<div id="up-button">
+			<button class="up-button__btn"><i class="fas fa-arrow-up"></i></button>
+		</div>
+	<!-- up-button -->
 	<main id="site-content">
 
 
@@ -117,56 +123,117 @@
 
 		<div class="container">
 
-				<section class="main-content-wrap s-main">
-					<div class="row">
-						<div class="col-12">
-							<div class="s-main-header">
-								<img src="img/home_teaser_headline.png" alt="">
-							</div>
-							<div class="s-main-headerbrd">
-							</div>
+			<section class="main-content-wrap s-main">
+				<div class="row">
+					<div class="col-12">
+						<div class="s-main-header">
+							<img src="img/home_teaser_headline.png" alt="">
+						</div>
+						<div class="s-main-headerbrd">
+						</div>
 
-							<div class="row justify-content-between s-main-preferen">
-								<div class="col-sm-4 s-main-preferen-item">
-									<img src="img/item1.png" alt="">
-								</div>
-								<div class="col-sm-4 s-main-preferen-item">
-									<img src="img/item2.png" alt="">
-								</div>
-								<div class="col-sm-4 s-main-preferen-item">
-									<img src="img/item3.png" alt="">
-								</div>
+						<div class="row justify-content-between s-main-preferen">
+							<div class="col-sm-4 s-main-preferen-item">
+								<img src="img/item1.png" alt="">
 							</div>
-							<p class="s-main-footertxt">Put your headphones on for Frequency, the March 2014 theme. It comes with
-								loads of features, like eight stunning parallax body backgrounds, you can use in your project.</p>
-							<div class="s-main-buttons">
-								<a href="#/" class="main-btn">Contacts</a>
-								<a href="#/" class="main-btn main-btn--dark main-btn--big">Portfolio</a>
+							<div class="col-sm-4 s-main-preferen-item">
+								<img src="img/item2.png" alt="">
 							</div>
+							<div class="col-sm-4 s-main-preferen-item">
+								<img src="img/item3.png" alt="">
+							</div>
+						</div>
+						<p class="s-main-footertxt">Put your headphones on for Frequency, the March 2014 theme. It comes with
+							loads of features, like eight stunning parallax body backgrounds, you can use in your project.</p>
+						<div class="s-main-buttons">
+							<a href="#/" class="main-btn">Contacts</a>
+							<a href="#/" class="main-btn main-btn--dark main-btn--big">Portfolio</a>
 						</div>
 					</div>
-				</section>
+				</div>
+			</section>
 
-				<section class="main-content-wrap s-posts">
-					<div class="row">
-						<div class="col-sm-6 s-posts-item">
-							<img src="img/post1.jpg" alt="">
-							<div class="s-posts-heading heading">
-								<h3 class="title-2">POWERED BY WARP 7</h3>
-								<p>The Warp framework provides a rich toolset for developing cross-platform themes, including support for LESS, a Customizer and its very own front-end framework, UIkit.</p>
-								<a class="site-link" href="#/">Continue reading »</a>
-							</div>
-						</div>
-						<div class="col-sm-6 s-posts-item">
-								<img src="img/post2.jpg" alt="">
-								<div class="s-posts-heading heading">
-									<h3 class="title-2">DOWNLOAD UIKIT</h3>
-									<p>A lightweight and modular front-end framework. It is open source and MIT licensed and you are free to use, modify and distribute it without any limitations.</p>
-									<a class="site-link" href="#/">Continue reading »</a>
-								</div>
+			<section class="main-content-wrap s-posts">
+				<div class="row">
+					<div class="col-sm-6 s-posts-item">
+						<img src="img/post1.jpg" alt="">
+						<div class="s-posts-heading heading">
+							<h3 class="title-2">POWERED BY WARP 7</h3>
+							<p>The Warp framework provides a rich toolset for developing cross-platform themes, including support for
+								LESS, a Customizer and its very own front-end framework, UIkit.</p>
+							<a class="site-link" href="#/">Continue reading »</a>
 						</div>
 					</div>
-				</section>
+					<div class="col-sm-6 s-posts-item">
+						<img src="img/post2.jpg" alt="">
+						<div class="s-posts-heading heading">
+							<h3 class="title-2">DOWNLOAD UIKIT</h3>
+							<p>A lightweight and modular front-end framework. It is open source and MIT licensed and you are free to
+								use, modify and distribute it without any limitations.</p>
+							<a class="site-link" href="#/">Continue reading »</a>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="main-content-wrap s-about">
+				<h2 class="title-1">About</h2>
+				<div class="s-main-headerbrd"></div>
+				<div class="s-about-tabs">
+					<ul class="s-about-tabs-wrap">
+						<li><button class="s-about-tabs__item is-active">About</button></li>
+						<li><button class="s-about-tabs__item">Resume</button></li>
+						<li><button class="s-about-tabs__item">Portfolio</button></li>
+					</ul>
+				</div>
+				<div class="s-about-content">
+					<div class="s-about-content-txtwrap">
+						<h4 class="title-4">Немного слов о себе</h4>
+						<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi mollitia laudantium autem neque, fuga quod
+						</p>
+						<p>aperiam eius ullam reiciendis, iusto eos ex? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+							Nisi!</p>
+					</div>
+
+
+					<div class="heading">
+						<h5 class="title-5">Услуги</h5>
+					</div>
+
+					<div class="row s-about-content-services">
+						<div class="col-lg-3 col-sm-6 aboutme-services-item">
+							<img
+								src="https://lmpixels.com/demo/sunshine-demo/sunshine-version-2/sunshine-html-template/images/service/management.png"
+								alt="Responsive Design">
+							<h4>Верстка</h4>
+							<p>Адаптивная верстка проекта от дизайна до готового веб-сайта.</p>
+						</div>
+						<div class="col-lg-3 col-sm-6 aboutme-services-item">
+							<img
+								src="https://lmpixels.com/demo/sunshine-demo/sunshine-version-2/sunshine-html-template/images/service/web_design.png"
+								alt="Responsive Design">
+							<h4>Веб дизайн</h4>
+							<p>Создание современного и привлекательного дизайна сайта.</p>
+						</div>
+						<div class="col-lg-3 col-sm-6 aboutme-services-item">
+							<img
+								src="https://lmpixels.com/demo/sunshine-demo/sunshine-version-2/sunshine-html-template/images/service/copywrite.png"
+								alt="Responsive Design">
+							<h4>Копирайтинг</h4>
+							<p>Создание грамотного и оптимизированного текста для продвижения</p>
+						</div>
+						<div class="col-lg-3 col-sm-6 aboutme-services-item">
+							<img
+								src="https://lmpixels.com/demo/sunshine-demo/sunshine-version-2/sunshine-html-template/images/service/ecommerce.png"
+								alt="Responsive Design">
+							<h4>Контент</h4>
+							<p>Разработка контент-плана, контроль за исполнением и наполнением.</p>
+						</div>
+					</div>
+				</div>
+
+
+			</section>
 		</div>
 	</main>
 

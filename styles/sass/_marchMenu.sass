@@ -111,12 +111,23 @@ $menu-width-mob: 320px
 
 .allwrap
   transition: .4s
-
 #site-content
   transition: $anim
-  &.is-active
+  overflow-y: hidden
+#my-body.is-active
+  overflow: hidden
+  #site-content
     transform: translateX(-$menu-width)
     filter: brightness(0.4)
+    &:before
+      content: ''
+      position: fixed
+      right: 0
+      left: 0
+      top: 0
+      bottom: 0
+      z-index: 999999999
+      overflow-y: hidden
     +media-breakpoint-down(xs)
       transform: translateX(-$menu-width-mob)
 
@@ -168,3 +179,4 @@ $menu-width-mob: 320px
 
 // .march-menu-subwrap.is-active
 //   height: 50px
+

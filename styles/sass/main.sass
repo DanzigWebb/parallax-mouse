@@ -71,7 +71,9 @@
   background-clip: padding-box
   margin-bottom: 30px
   padding: 10px
-
+  +media-breakpoint-down(xs)
+    border: 10px solid #ffffff
+    border-image-slice: 10
 .s-main
 
   &-header
@@ -87,8 +89,8 @@
     width: 95%
     background: url(../../img/block_divider_dark.png) 50% 50% repeat-x
     padding: 30px 0
-    margin: 50px auto
-
+    +media-breakpoint-down(xs)
+      width: 100%
   &-preferen
     margin-bottom: 50px
     &-item
@@ -128,6 +130,92 @@
     a
       position: absolute
       bottom: 30px
+
+// portfolio
+
+.s-about
+  min-height: 400px
+  position: relative
+  &-tabs
+    position: absolute
+    left: -45px
+    width: 110px
+    top: 130px
+    bottom: 0
+    display: flex
+    flex-direction: column
+    justify-content: center
+    +media-breakpoint-down(xs)
+      display: none
+    &-wrap
+      margin: 0
+      padding: 0
+      list-style: none
+      overflow: hidden
+    &__item
+      width: 100px
+      border: none
+      font-weight: 500
+      color: #fff
+      height: 40px
+      background-image: url(../../img/grunge_bg_light.png)
+      background-color: #4a4a4a
+      margin-bottom: 10px
+      position: relative
+      cursor: pointer
+      transition: $anim
+      &:hover
+        filter: none
+        background-color: $accent
+      &.is-active
+        background-color: $accent
+        filter: none
+        box-shadow: 0px 4px 0px 0px rgba(239, 80, 71, 0.5)
+
+  &-content
+    margin-left: 90px
+    padding: 10px
+    +media-breakpoint-down(md)
+      margin-left: 30px
+    +media-breakpoint-down(xs)
+      margin-left: 0
+    &-services
+      margin: 25px 0
+    &-txtwrap
+      p
+        max-width: 60%
+        padding-left: 15px
+        +media-breakpoint-down(md)
+          max-width: 80%
+        +media-breakpoint-down(xs)
+          min-width: 100%
+
+.aboutme-services-item
+  text-align: center
+  +media-breakpoint-down(xs)
+    margin-bottom: 25px
+  img
+    max-height: 74px
+    margin-bottom: $gutter
+
+.aboutme-facts-item
+  text-align: center
+  padding: 20px 10px 15px
+  margin-right: -10px
+  .pe-7s-icon
+    font-size: 56px
+    color: #888
+.aboutme-facts-wrap
+  box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.1)
+  padding: 10px 0
+.aboutme-facts-wrap--gray
+  background-color: #fafafa
+.aboutme-facts-item__number
+  font-size: 24px
+  color: $accent
+  font-weight: 600
+
+
 // bottom
 
 @import "media"
