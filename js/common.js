@@ -39,9 +39,9 @@ function openSiderbar() {
 	});
 
 	let button = marchMenu.querySelectorAll('.march-link-button');
-	
+
 	document.addEventListener('click', function (e) {
-		
+
 		// закрытие меню при клике на ссылки или контент
 		menuLink.forEach(link => {
 			if (e.target == link || e.target == siteContent) {
@@ -54,8 +54,8 @@ function openSiderbar() {
 	});
 
 	button.forEach(item => {
-		item.addEventListener('click', function(e) {
-			
+		item.addEventListener('click', function (e) {
+
 			if (e.target == this || e.target == this.childNodes[0]) {
 				// удаление класса у всех кнопок кроме нажатой
 				button.forEach(butt => {
@@ -65,7 +65,7 @@ function openSiderbar() {
 						butt.previousElementSibling.style.height = `0px`
 					}
 				});
-				
+
 			}
 			this.classList.add('is-active');
 			let linkWrap = this.previousElementSibling;
@@ -74,32 +74,117 @@ function openSiderbar() {
 
 		})
 	});
-	
+
 }
 
 openSiderbar()
 
 
-
-window.addEventListener(`resize`, e => {
-  let scrollHeight = Math.max(
-		document.body.scrollHeight, document.documentElement.scrollHeight,
-		document.body.offsetHeight, document.documentElement.offsetHeight,
-		document.body.clientHeight, document.documentElement.clientHeight
-	);
-	
-	
-
-}, false);
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function () {
 	let upButton = document.querySelector('#up-button');
 	if (pageYOffset > 400) {
 		upButton.classList.add('is-active');
-	}
-	else {
+	} else {
 		upButton.classList.remove('is-active');
 	}
 	upButton.addEventListener('click', e => {
-		window.scrollTo(0,0)
+		window.scrollTo(0, 0)
 	})
 })
+
+
+
+let aboutOpens = function () {
+	let aboutSection = document.getElementById('about-wrap');
+		let aboutContent = aboutSection.querySelector('.s-about-content');
+		let aboutButtons = aboutSection.querySelector('.s-about-tabs-wrap');
+		let aboutBtn = aboutButtons.querySelectorAll('.s-about-tabs__item');
+		let aboutItem = aboutSection.querySelectorAll('.s-about-item');
+	let btnPrev = aboutSection.querySelector('.s-about-arrows__btn-prev');
+	let btnNext = aboutSection.querySelector('.s-about-arrows__btn-next');
+	// позиционирование элементов
+	let getPosition = function () {
+		aboutItem.forEach(function (item, i, aboutItemArr) {
+			if (i > 0) {
+				item.style.transform = `translateX(${i*item.offsetWidth}px)`;
+			}
+		});
+		aboutContent.style.height = `${aboutItem[0].offsetHeight}px`
+	}
+	getPosition()
+
+	window.addEventListener(`resize`, e => {
+		getPosition()
+	}, false);
+
+
+	let removeActiveButton = function (arrButtons) {
+		arrButtons.forEach(item => {
+			item.classList.remove('is-active');
+		});
+	}
+
+	let moveSlider = function (number) {
+		aboutContent.style.transform = `translateX(-${number*aboutItem[number].offsetWidth}px)`;
+		aboutContent.style.height = `${aboutItem[number].offsetHeight}px`;
+	}
+
+
+	// логика переключателя
+	aboutSection.addEventListener('click', function (e) {
+
+		let btnNumber = 0;
+
+		aboutBtn.forEach(function (btn, i, btnArr) {
+			// логика кнопок
+			if (e.target == btn) {
+				removeActiveButton(btnArr);
+				btn.classList.add('is-active');
+			}
+			if (btn.classList.contains('is-active')) {
+				btnNumber = i;
+			}
+			
+			// логика стрелок
+
+
+			if (e.target == btn) {
+				moveSlider (btnNumber)
+			}
+		})
+
+		aboutItem[btnNumber].classList.add('is-active');
+
+		if (e.target == btnNext) {
+			if (btnNumber < 2) { 
+				removeActiveButton(aboutBtn);
+				aboutBtn[btnNumber].nextElementSibling.classList.add('is-active');
+				aboutBtn.forEach(function (btn, i, btnArr) {
+					if (btn.classList.contains('is-active')) {
+						btnNumber = i;
+					}
+				})
+				moveSlider (btnNumber)
+			}
+
+		}
+
+		if (e.target == btnPrev) {
+			if (btnNumber > 0) {
+				removeActiveButton(aboutBtn);
+				aboutBtn[btnNumber].previousElementSibling.classList.add('is-active');
+				aboutBtn.forEach(function (btn, i, btnArr) {
+					if (btn.classList.contains('is-active')) {
+						btnNumber = i;
+					}
+				})
+					moveSlider (btnNumber)
+			}
+		}
+
+		
+	})
+
+
+}
+aboutOpens()

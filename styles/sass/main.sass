@@ -132,6 +132,8 @@
 .s-about
   min-height: 400px
   position: relative
+  &-hidden-fixed
+    overflow: hidden
   &-tabs
     display: flex
     justify-content: center
@@ -166,6 +168,10 @@
 
   &-content
     padding: 30px 0
+    position: relative
+    height: 600px
+    display: flex
+    transition: $anim
     &-services
       margin: 25px 0
     &-txtwrap
@@ -176,6 +182,10 @@
           max-width: 80%
         +media-breakpoint-down(xs)
           min-width: 100%
+  &-item
+    width: 100%
+    position: absolute
+    padding: 20px
 
 .aboutme-services-item
   text-align: center
@@ -208,6 +218,7 @@
 
 .s-about-resume-content
   margin: 20px 0
+
 // resume
 .resume
   .title-4
@@ -245,7 +256,7 @@
   background-color: $accent
   background-image: url(../../img/grunge_bg_light.png)
   padding: 5px 8px 5px 23px
-  margin-left: -23px
+  margin-left: -10px
 .resume-title
   margin: 0
 .resume__descr
@@ -254,6 +265,36 @@
   font-size: 12px
   font-weight: 300
   line-height: 1.45em
+
+
+.s-about-arrows
+  position: absolute
+  top: 400px
+  width: 100%
+  z-index: 1
+  &__btn
+    border: none
+    background-color: $accent
+    color: #fff
+    width: 50px
+    height: 50px
+    background-image: url(../../img/grunge_bg_light.png)
+    cursor: pointer
+    transition: $anim
+    position: absolute
+    z-index: 10
+    .fas
+      position: relative
+      z-index: -1
+    &-next
+      right: -15px
+    &-prev
+      left: -32px
+    &:hover
+      background-color: #4a4a4a
+
+
+
 // bottom
 
 @import "media"
