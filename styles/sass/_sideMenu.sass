@@ -1,14 +1,13 @@
 
 $menu-width: 400px
 $menu-width-mob: 320px
-.march-menu
+.side-menu
   position: fixed
   top: 0
   bottom: 0
   right: -$menu-width
   background-color: #fff
   width: $menu-width
-  z-index: 200
   min-height: 100vh
   height: 100%
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.5)
@@ -19,8 +18,8 @@ $menu-width-mob: 320px
   padding: 20px 0
   overflow-x: hidden
   transition: $anim
-  &.is-active
-    right: 0
+  margin: 0
+  z-index: 999
   ul
     margin: 0
     padding-left: 40px
@@ -106,18 +105,13 @@ $menu-width-mob: 320px
     a:hover
       text-decoration: none
 
-.site-body
-  transition: $anim
 
-.allwrap
-  transition: .4s
 #site-content
   transition: $anim
-  overflow-y: hidden
 #my-body.is-active
-  overflow: hidden
   #site-content
     transform: translateX(-$menu-width)
+    transition-delay: .1s
     filter: brightness(0.4)
     &:before
       content: ''
@@ -127,15 +121,16 @@ $menu-width-mob: 320px
       top: 0
       bottom: 0
       z-index: 999999999
-      overflow-y: hidden
     +media-breakpoint-down(xs)
       transform: translateX(-$menu-width-mob)
+  .side-menu
+    right: 0
 
 
 
 // button end sublinks
 
-.march-link-button
+.side-link-button
   position: absolute
   right: 0
   top: 0
@@ -165,18 +160,14 @@ $menu-width-mob: 320px
       color: $accent
 
 
-.march-menu
+.side-menu
   &-subwrap
     overflow: hidden
     transition: .4s
     height: 0
 
 
-.march-link-button.is-active
+.side-link-button.is-active
   .fas
     transform: rotate(-180deg)
     color: $accent
-
-// .march-menu-subwrap.is-active
-//   height: 50px
-

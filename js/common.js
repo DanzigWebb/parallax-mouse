@@ -11,73 +11,6 @@ function parallax(e) {
 
 document.addEventListener('mousemove', parallax)
 
-function openSiderbar() {
-
-	let body = document.getElementById('my-body')
-	let headerButton = body.querySelector('.header-menu-button');
-	let marchMenu = body.querySelector('.march-menu');
-	let back = body.querySelector('.body-scene');
-	let menuLink = marchMenu.querySelectorAll('.march-menu__link');
-	let sublinkWrap = marchMenu.querySelectorAll('.march-menu-subwrap');
-	let siteContent = body.querySelector('#site-content');
-
-	// обработчик гамбургера
-	headerButton.addEventListener('click', function (e) {
-		this.classList.toggle('is-active');
-		marchMenu.classList.toggle('is-active');
-		body.classList.toggle('is-active');
-		back.style.filter = 'brightness(0.4)'
-	});
-
-	// создание кнопки при наличии вложенного списка ссылок
-	sublinkWrap.forEach(item => {
-		item.parentElement.classList.add('has-children');
-		let newButton = document.createElement('button');
-		newButton.innerHTML = `<i class="fas fa-arrow-up"></i>`
-		newButton.className = "march-link-button";
-		item.parentElement.appendChild(newButton);
-	});
-
-	let button = marchMenu.querySelectorAll('.march-link-button');
-
-	document.addEventListener('click', function (e) {
-
-		// закрытие меню при клике на ссылки или контент
-		menuLink.forEach(link => {
-			if (e.target == link || e.target == siteContent) {
-				headerButton.classList.remove('is-active')
-				marchMenu.classList.remove('is-active');
-				body.classList.remove('is-active');
-				back.style.filter = ''
-			}
-		});
-	});
-
-	button.forEach(item => {
-		item.addEventListener('click', function (e) {
-
-			if (e.target == this || e.target == this.childNodes[0]) {
-				// удаление класса у всех кнопок кроме нажатой
-				button.forEach(butt => {
-					if (butt.classList.contains('is-active')) {
-						butt.classList.remove('is-active');
-						this.classList.remove('is-active');
-						butt.previousElementSibling.style.height = `0px`
-					}
-				});
-
-			}
-			this.classList.add('is-active');
-			let linkWrap = this.previousElementSibling;
-			linkWrap.style.height = `${linkWrap.scrollHeight}px`;
-
-
-		})
-	});
-
-}
-
-openSiderbar()
 
 
 window.addEventListener('scroll', function () {
@@ -96,10 +29,10 @@ window.addEventListener('scroll', function () {
 
 let aboutOpens = function () {
 	let aboutSection = document.getElementById('about-wrap');
-		let aboutContent = aboutSection.querySelector('.s-about-content');
-		let aboutButtons = aboutSection.querySelector('.s-about-tabs-wrap');
-		let aboutBtn = aboutButtons.querySelectorAll('.s-about-tabs__item');
-		let aboutItem = aboutSection.querySelectorAll('.s-about-item');
+	let aboutContent = aboutSection.querySelector('.s-about-content');
+	let aboutButtons = aboutSection.querySelector('.s-about-tabs-wrap');
+	let aboutBtn = aboutButtons.querySelectorAll('.s-about-tabs__item');
+	let aboutItem = aboutSection.querySelectorAll('.s-about-item');
 	let btnPrev = aboutSection.querySelector('.s-about-arrows__btn-prev');
 	let btnNext = aboutSection.querySelector('.s-about-arrows__btn-next');
 	// позиционирование элементов
@@ -127,22 +60,22 @@ let aboutOpens = function () {
 	window.addEventListener(`resize`, e => {
 		getPosition();
 		if (window.innerWidth >= 1200) {
-			aboutContent.style.transform = moveSlider (0);
+			aboutContent.style.transform = moveSlider(0);
 		} else if (window.innerWidth >= 992) {
-			moveSlider (0);
+			moveSlider(0);
 		} else if (window.innerWidth >= 768) {
-			moveSlider (0);
+			moveSlider(0);
 		} else if (window.innerWidth >= 576) {
-			moveSlider (0);
+			moveSlider(0);
 		}
 	}, false);
 
 
 	// логика переключателя
 	aboutSection.addEventListener('click', function (e) {
-		
+
 		let btnNumber = 0;
-		
+
 		aboutBtn.forEach(function (btn, i, btnArr) {
 			// логика кнопок
 			if (e.target == btn) {
@@ -152,20 +85,20 @@ let aboutOpens = function () {
 			if (btn.classList.contains('is-active')) {
 				btnNumber = i;
 			}
-			
+
 			// логика стрелок
 
 
 			if (e.target == btn) {
-				moveSlider (btnNumber)
+				moveSlider(btnNumber)
 			}
 		})
 
 		aboutItem[btnNumber].classList.add('is-active');
 
 		if (e.target == btnNext) {
-			
-			if (btnNumber < 2) { 
+
+			if (btnNumber < 2) {
 				removeActiveButton(aboutBtn);
 				aboutBtn[btnNumber].nextElementSibling.classList.add('is-active');
 				aboutBtn.forEach(function (btn, i, btnArr) {
@@ -173,12 +106,11 @@ let aboutOpens = function () {
 						btnNumber = i;
 					}
 				})
-				moveSlider (btnNumber)
-			}
-			else  {
+				moveSlider(btnNumber)
+			} else {
 				removeActiveButton(aboutBtn);
 				aboutBtn[0].classList.add('is-active');
-				moveSlider (0)
+				moveSlider(0)
 			}
 
 		}
@@ -192,17 +124,20 @@ let aboutOpens = function () {
 						btnNumber = i;
 					}
 				})
-					moveSlider (btnNumber)
-			}
-			else  {
+				moveSlider(btnNumber)
+			} else {
 				removeActiveButton(aboutBtn);
 				aboutBtn[2].classList.add('is-active');
-				moveSlider (2)
+				moveSlider(2)
 			}
 		}
-		
+
 	})
 
 
 }
-aboutOpens()
+// aboutOpens()
+
+
+sidebar.init()
+
