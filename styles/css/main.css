@@ -3500,12 +3500,6 @@ p {
   padding-bottom: 30px;
 }
 
-@media (min-width: 1200px) {
-  .s-about-tabs {
-    display: none;
-  }
-}
-
 .s-about-tabs-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3555,12 +3549,6 @@ p {
 @media (max-width: 575.98px) {
   .s-about-arrows {
     top: 300px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .s-about-arrows {
-    display: none;
   }
 }
 
