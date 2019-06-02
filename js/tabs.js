@@ -20,12 +20,24 @@ let Tabs = {
     
 		if (window.innerWidth >= 1200) {
 			tabArea.style.transform = thisHelper.moveSlider(tabArea, 0, tabItem);
+			this.removeActiveButton(tabsButtons);
+			tabsButtons[0].classList.add('is-active');
+			
 		} else if (window.innerWidth >= 992) {
-			thisHelper.moveSlider(tabArea, 0, tabItem);
+			this.moveSlider(tabArea, 0, tabItem);
+			this.removeActiveButton(tabsButtons);
+			tabsButtons[0].classList.add('is-active');
+			
 		} else if (window.innerWidth >= 768) {
-			thisHelper.moveSlider(tabArea, 0, tabItem);
+			this.moveSlider(tabArea, 0, tabItem);
+			this.removeActiveButton(tabsButtons);
+			tabsButtons[0].classList.add('is-active');
+			
 		} else if (window.innerWidth >= 576) {
-			thisHelper.moveSlider(tabArea, 0, tabItem);
+			this.moveSlider(tabArea, 0, tabItem);
+			this.removeActiveButton(tabsButtons);
+			tabsButtons[0].classList.add('is-active');
+			
 		}
 	}, false);
 

@@ -113,7 +113,52 @@ p
 
 .heading
   margin: 15px 0
+.headerbrd
+  height: 60px
+  width: 95%
+  background: url(../../img/block_divider_dark.png) 50% 50% repeat-x
+  padding: 30px 0
+  &--min
+    background: url(../../img/headerbrd--min.png) 50% 50% repeat-x
+  +media-breakpoint-down(xs)
+    width: 100%
 
+/////////////////////////////////////////////////////////////
+// social
+/////////////////////////////////////////////////////////////
+.social-nav
+  margin: 20px 0
+  text-align: center
+  .fab
+    box-sizing: border-box
+    display: inline-block
+    width: 40px
+    height: 40px
+    border-radius: 100%
+    background: $accent
+    color: #ffffff
+    font-size: 15px
+    text-align: center
+    position: relative
+    background-image: url(../../img/grunge_bg_light.png)
+    background-position: 0 0
+    background-repeat: repeat
+    transition: all 0.1s ease-in-out
+    display: inline-flex
+    justify-content: center
+    align-items: center
+    &:after
+      content: ''
+      position: absolute
+      width: 36px
+      height: 36px
+      border: 2px solid #fff
+      border-radius: 50%
+    &:hover
+      background: $dark
+      color: #fff
+  a:hover
+    text-decoration: none
 /////////////////////////////////////////////////////////////
 // up-button
 /////////////////////////////////////////////////////////////
@@ -209,7 +254,7 @@ p
 // button animation
  //button
 .header-menu-button
-  width: 40px
+  width: 42px
   height: 37px
   margin: 5px
   display: flex
@@ -220,6 +265,7 @@ p
   background-color: $accent
   background-image: url(../../img/grunge_bg_light.png)
   border-radius: 5px
+  border: none
   span
     width: 30px
     height: 2px
@@ -229,6 +275,7 @@ p
     transition: .2s
     animation-name: slide
     z-index: 10
+    display: flex
     &:after
       content: ''
       width: 30px

@@ -2604,42 +2604,6 @@ html {
           box-shadow: inset 0 0 1px 2px rgba(0, 0, 0, 0.02);
 }
 
-.side-menu-social {
-  margin: 20px 0;
-  text-align: center;
-}
-
-.side-menu-social .fab {
-  display: inline-block;
-  margin: 0 2px;
-  width: 35px;
-  height: 35px;
-  padding: 5px;
-  color: #888;
-  background-color: #eee;
-  text-align: center;
-  -webkit-transition: all .4s ease-in-out;
-  transition: all .4s ease-in-out;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.side-menu-social .fab:hover {
-  background-color: #f2726b;
-  color: #fff;
-}
-
-.side-menu-social a:hover {
-  text-decoration: none;
-}
-
 #site-content {
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
@@ -2895,6 +2859,74 @@ p {
   margin: 15px 0;
 }
 
+.headerbrd {
+  height: 60px;
+  width: 95%;
+  background: url(../../img/block_divider_dark.png) 50% 50% repeat-x;
+  padding: 30px 0;
+}
+
+.headerbrd--min {
+  background: url(../../img/headerbrd--min.png) 50% 50% repeat-x;
+}
+
+@media (max-width: 575.98px) {
+  .headerbrd {
+    width: 100%;
+  }
+}
+
+.social-nav {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.social-nav .fab {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background: #f2726b;
+  color: #ffffff;
+  font-size: 15px;
+  text-align: center;
+  position: relative;
+  background-image: url(../../img/grunge_bg_light.png);
+  background-position: 0 0;
+  background-repeat: repeat;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.social-nav .fab:after {
+  content: '';
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+}
+
+.social-nav .fab:hover {
+  background: #4a4a4a;
+  color: #fff;
+}
+
+.social-nav a:hover {
+  text-decoration: none;
+}
+
 #up-button {
   position: fixed;
   bottom: 10px;
@@ -3018,7 +3050,7 @@ p {
 }
 
 .header-menu-button {
-  width: 40px;
+  width: 42px;
   height: 37px;
   margin: 5px;
   display: -webkit-box;
@@ -3035,6 +3067,7 @@ p {
   background-color: #f2726b;
   background-image: url(../../img/grunge_bg_light.png);
   border-radius: 5px;
+  border: none;
 }
 
 .header-menu-button span {
@@ -3048,6 +3081,9 @@ p {
   -webkit-animation-name: slide;
           animation-name: slide;
   z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .header-menu-button span:after {
@@ -3224,19 +3260,6 @@ p {
 
 .s-main-header {
   height: auto;
-}
-
-.s-main-headerbrd {
-  height: 60px;
-  width: 95%;
-  background: url(../../img/block_divider_dark.png) 50% 50% repeat-x;
-  padding: 30px 0;
-}
-
-@media (max-width: 575.98px) {
-  .s-main-headerbrd {
-    width: 100%;
-  }
 }
 
 .s-main-preferen {
@@ -3501,7 +3524,6 @@ p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-bottom: 30px;
 }
 
 .s-about-tabs-wrap {
@@ -3515,14 +3537,14 @@ p {
 }
 
 .s-about-tabs__item {
-  width: 100px;
+  width: 80px;
   border: none;
   font-weight: 500;
   color: #fff;
   height: 40px;
   background-image: url(../../img/grunge_bg_light.png);
   background-color: #4a4a4a;
-  margin: 0 10px;
+  margin: 0 5px;
   position: relative;
   cursor: pointer;
   -webkit-transition: all 0.5s ease;
@@ -3550,18 +3572,12 @@ p {
   z-index: 1;
 }
 
-@media (max-width: 575.98px) {
-  .s-about-arrows {
-    top: 300px;
-  }
-}
-
 .s-about-arrows__btn {
   border: none;
   background-color: #f2726b;
   color: #fff;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   background-image: url(../../img/grunge_bg_light.png);
   cursor: pointer;
   -webkit-transition: all 0.5s ease;
@@ -3604,6 +3620,32 @@ p {
 
 .s-about-arrows__btn:hover {
   background-color: #4a4a4a;
+}
+
+.s-contacts-content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.s-contacts .social-nav {
+  text-align: left;
+}
+
+.s-contacts p {
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.s-contacts img {
+  width: 100%;
 }
 
 /*==========  Desktop First  ==========*/
