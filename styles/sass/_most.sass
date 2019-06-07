@@ -2,305 +2,343 @@
 // body
 /////////////////////////////////////////////////////////////
 html
-  scroll-behavior: smooth
-  overflow-x: hidden
+    scroll-behavior: smooth
+    overflow-x: hidden
+
 .site-body
-  font-size: 16px
-  margin: auto
-  position: relative
-  line-height: 22px
-  font-family: 'Montserrat', sans-serif
-  font-weight: 400
-  overflow-x: hidden
-  color: #333
-  width: 100%
-  transition: $anim
-  input, textarea
-    border: #666 1px solid
-    outline: none
-    &:focus:required:invalid
-      border-color: red
-    &:required:valid
-      border-color: green
+    font-size: 16px
+    margin: auto
+    position: relative
+    line-height: 22px
+    font-family: "Montserrat", sans-serif
+    font-weight: 400
+    overflow-x: hidden
+    color: #333
+    width: 100%
+    transition: $anim
+
+    input, textarea
+        border: #666 1px solid
+        outline: none
+
+        &:focus:required:invalid
+            border-color: red
+
+        &:required:valid
+            border-color: green
 
 /////////////////////////////////////////////////////////////
 // links and buttons
 /////////////////////////////////////////////////////////////
 
 .def-link
-  transition: $anim
-  &:hover
-    text-decoration: none
-.site-link
-  transition: $anim
-  color: $accent
-  &:hover
-    text-decoration: none
-    color: #954a46
-.main-btn
-  min-height: 55px
-  padding: 0 40px
-  margin: 10px 0
-  height: 55px
-  display: inline-flex
-  align-items: center
-  justify-content: center
-  font-size: 17px
-  background-color: #da6931
-  color: #ffffff
-  background-image: url(../../img/grunge_bg_light.png)  
-  margin: 0
-  border: none
-  overflow: visible
-  color: #ffffff
-  text-transform: none
-  box-sizing: border-box
-  font-size: 1rem
-  text-decoration: none
-  text-align: center
-  border-radius: 7px
-  background-position: 0 0
-  background-repeat: repeat
-  transition: all 0.2s ease-in-out
-  &:hover
-    color: #fff
-    background-color: #d56026
-    text-decoration: none
-    box-shadow: 0 1px 7px rgba(0, 0, 0, 0.6) inset
-  &--dark
-    background-color: #4a4a4a
+    transition: $anim
+
     &:hover
-      background-color: #424242
+        text-decoration: none
+
+.site-link
+    transition: $anim
+    color: $accent
+
+    &:hover
+        text-decoration: none
+        color: #954a46
+
+.main-btn
+    min-height: 55px
+    padding: 0 40px
+    margin: 10px 0
+    height: 55px
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    font-size: 17px
+    background-color: #da6931
+    color: #ffffff
+    background-image: url(../../img/grunge_bg_light.png)
+    margin: 0
+    border: none
+    overflow: visible
+    color: #ffffff
+    text-transform: none
+    box-sizing: border-box
+    font-size: 1rem
+    text-decoration: none
+    text-align: center
+    border-radius: 7px
+    background-position: 0 0
+    background-repeat: repeat
+    transition: all 0.2s ease-in-out
+
+    &:hover
+        color: #fff
+        background-color: #d56026
+        text-decoration: none
+        box-shadow: 0 1px 7px rgba(0, 0, 0, 0.6) inset
+
+    &--dark
+        background-color: #4a4a4a
+
+        &:hover
+            background-color: #424242
+
 /////////////////////////////////////////////////////////////
 // typograf
 /////////////////////////////////////////////////////////////
 h1, h2, h3, h4, h5, h6
-  font-family: 'Oswald', sans-serif
+    font-family: "Oswald", sans-serif
+
 .title-1
-  font-size: 90px
-  text-transform: uppercase
-  font-weight: 900
-  text-align: center
-  line-height: 95px
-  +media-breakpoint-down(xs)
-    font-size: 50px
-    line-height: 65px
+    font-size: 90px
+    text-transform: uppercase
+    font-weight: 900
+    text-align: center
+    line-height: 95px
+
+    +media-breakpoint-down(xs)
+        font-size: 50px
+        line-height: 65px
+
 .title-2
-  font-size: 48px
-  line-height: 52px
-  margin: 0 0 15px 0
-  font-weight: 300
-  color: #444444
+    font-size: 48px
+    line-height: 52px
+    margin: 0 0 15px 0
+    font-weight: 300
+    color: #444444
 
 .title-4
-  font-size: 18px
-  font-weight: normal
-  margin-bottom: 15px
+    font-size: 18px
+    font-weight: normal
+    margin-bottom: 15px
 
 .title-5
-  border-bottom: 2px solid #ffcd38
-  display: inline-block
-  font-weight: normal
-  padding-bottom: 2px
-  margin-bottom: 20px
-  font-size: 18px
+    border-bottom: 2px solid #ffcd38
+    display: inline-block
+    font-weight: normal
+    padding-bottom: 2px
+    margin-bottom: 20px
+    font-size: 18px
 
 p
-  font-size: 14px
-  font-weight: 300
-  color: #666
-  margin: 0 0 10px
+    font-size: 14px
+    font-weight: 300
+    color: #666
+    margin: 0 0 10px
 
 .heading
-  margin: 15px 0
+    margin: 15px 0
+
 .headerbrd
-  height: 60px
-  width: 95%
-  background: url(../../img/block_divider_dark.png) 50% 50% repeat-x
-  padding: 30px 0
-  &--min
-    background: url(../../img/headerbrd--min.png) 50% 50% repeat-x
-  +media-breakpoint-down(xs)
-    width: 100%
+    height: 60px
+    width: 95%
+    background: url(../../img/block_divider_dark.png) 50% 50% repeat-x
+    padding: 30px 0
+
+    &--min
+        background: url(../../img/headerbrd--min.png) 50% 50% repeat-x
+
+    &--white
+        background: url(../../img/headerbrd--white.png) 50% 50% repeat-x
+
+    +media-breakpoint-down(xs)
+        width: 100%
 
 /////////////////////////////////////////////////////////////
 // social
 /////////////////////////////////////////////////////////////
 .social-nav
-  margin: 20px 0
-  text-align: center
-  .fab
-    box-sizing: border-box
-    display: inline-block
-    width: 40px
-    height: 40px
-    border-radius: 100%
-    background: $accent
-    color: #ffffff
-    font-size: 15px
+    margin: 20px 0
     text-align: center
-    position: relative
-    background-image: url(../../img/grunge_bg_light.png)
-    background-position: 0 0
-    background-repeat: repeat
-    transition: all 0.1s ease-in-out
-    display: inline-flex
-    justify-content: center
-    align-items: center
-    &:after
-      content: ''
-      position: absolute
-      width: 36px
-      height: 36px
-      border: 2px solid #fff
-      border-radius: 50%
-    &:hover
-      background: $dark
-      color: #fff
-  a:hover
-    text-decoration: none
+
+    .fab
+        box-sizing: border-box
+        display: inline-block
+        width: 40px
+        height: 40px
+        border-radius: 100%
+        background: $accent
+        color: #ffffff
+        font-size: 15px
+        text-align: center
+        position: relative
+        background-image: url(../../img/grunge_bg_light.png)
+        background-position: 0 0
+        background-repeat: repeat
+        transition: all 0.1s ease-in-out
+        display: inline-flex
+        justify-content: center
+        align-items: center
+
+        &:after
+            content: ""
+            position: absolute
+            width: 36px
+            height: 36px
+            border: 2px solid #fff
+            border-radius: 50%
+
+        &:hover
+            background: $dark
+            color: #fff
+
+    a:hover
+        text-decoration: none
+
 /////////////////////////////////////////////////////////////
 // up-button
 /////////////////////////////////////////////////////////////
 
 #up-button
-  position: fixed
-  bottom: 10px
-  right: 10px
-  opacity: 0
-  transition: $anim
-  z-index: 9999999
-  &:hover
-    opacity: 1
-  &.is-active
-    opacity: 0.4
+    position: fixed
+    bottom: 10px
+    right: 10px
+    opacity: 0
+    transition: $anim
+    z-index: 9999999
+
+    &:hover
+        opacity: 1
+
+    &.is-active
+        opacity: 0.4
+
 .up-button
-  &__btn
-    cursor: pointer
-    border-radius: 8px
-    border: none
-    background-color: $accent
-    color: #fff
-    padding: 13px
-  
+    &__btn
+        cursor: pointer
+        border-radius: 8px
+        border: none
+        background-color: $accent
+        color: #fff
+        padding: 13px
 
 /////////////////////////////////////////////////////////////
 // slick
 /////////////////////////////////////////////////////////////
 
 .slick-dotted.slick-slider
-  margin-bottom: 30px
+    margin-bottom: 30px
+
 .slick-dots
-  display: block
-  width: 100%
-  padding: 0
-  margin: 0
-  list-style: none
-  text-align: center
+    display: block
+    width: 100%
+    padding: 0
+    margin: 0
+    list-style: none
+    text-align: center
+
 .slick-dots li
-  position: relative
-  display: inline-block
-  width: 20px
-  height: 20px
-  margin: 0 3px
-  padding: 0
-  cursor: pointer
+    position: relative
+    display: inline-block
+    width: 20px
+    height: 20px
+    margin: 0 3px
+    padding: 0
+    cursor: pointer
+
 .slick-dots li button
-  font-size: 0
-  line-height: 0
-  display: block
-  width: 20px
-  height: 20px
-  padding: 5px
-  cursor: pointer
-  color: transparent
-  border: 0
-  outline: none
-  background: transparent
+    font-size: 0
+    line-height: 0
+    display: block
+    width: 20px
+    height: 20px
+    padding: 5px
+    cursor: pointer
+    color: transparent
+    border: 0
+    outline: none
+    background: transparent
+
 .slick-dots li button:hover,
 .slick-dots li button:focus
-  outline: none
+    outline: none
+
 .slick-dots li button:hover:before,
 .slick-dots li button:focus:before
-  opacity: 1
+    opacity: 1
+
 .slick-dots li button:before
-  font-family: 'slick'
-  font-size: 60px
-  line-height: 20px
-  position: absolute
-  top: 0
-  left: 0
-  width: 20px
-  height: 20px
-  content: '•'
-  text-align: center
-  opacity: .25
-  color: #E1E1E1
-  -webkit-font-smoothing: antialiased
-  -moz-osx-font-smoothing: grayscale
+    font-family: "slick"
+    font-size: 60px
+    line-height: 20px
+    position: absolute
+    top: 0
+    left: 0
+    width: 20px
+    height: 20px
+    content: "•"
+    text-align: center
+    opacity: 0.25
+    color: #E1E1E1
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+
 .slick-dots li.slick-active button:before
-  opacity: 1
-  color: #AFAFAF
+    opacity: 1
+    color: #AFAFAF
 
+\::placeholder
+    color: #666
 
-::placeholder
-  color: #666
-
-::selection
-  background-color: $accent
-  color: #fff
-
+\::selection
+    background-color: $accent
+    color: #fff
 
 // button animation
- //button
+// //button
 .header-menu-button
-  width: 42px
-  height: 37px
-  margin: 5px
-  display: flex
-  justify-content: center
-  align-items: center
-  cursor: pointer
-  overflow: hidden
-  background-color: $accent
-  background-image: url(../../img/grunge_bg_light.png)
-  border-radius: 5px
-  border: none
-  span
-    width: 30px
-    height: 2px
-    background-color: #fff
-    position: relative
-    z-index: -1
-    transition: .2s
-    animation-name: slide
-    z-index: 10
+    width: 42px
+    height: 37px
+    margin: 5px
     display: flex
-    &:after
-      content: ''
-      width: 30px
-      height: 2px
-      background-color: #fff
-      position: absolute
-      top: -8px
-      transition: .2s
-    &:before
-      content: ''
-      width: 30px
-      height: 2px
-      background-color: #fff
-      position: absolute
-      bottom: -8px
-      transition: bottom .2s ease .5s
-  &.is-active
-    span
-      background-color: transparent
-    span:before
-      bottom: 0
-      transform: rotate(315deg)
-      transition: transform .2s ease .3s, bottom .3s ease 0s
-    span:after
-      top: 0
-      transform: rotate(-315deg)
-      transition: transform .5s ease .3s, top .3s ease 0s
+    justify-content: center
+    align-items: center
+    cursor: pointer
+    overflow: hidden
+    background-color: $accent
+    background-image: url(../../img/grunge_bg_light.png)
+    border-radius: 5px
+    border: none
 
+    span
+        width: 30px
+        height: 2px
+        background-color: #fff
+        position: relative
+        z-index: -1
+        transition: 0.2s
+        animation-name: slide
+        z-index: 10
+        display: flex
+
+        &:after
+            content: ""
+            width: 30px
+            height: 2px
+            background-color: #fff
+            position: absolute
+            top: -8px
+            transition: 0.2s
+
+        &:before
+            content: ""
+            width: 30px
+            height: 2px
+            background-color: #fff
+            position: absolute
+            bottom: -8px
+            transition: bottom 0.2s ease 0.5s
+
+    &.is-active
+        span
+            background-color: transparent
+
+        span:before
+            bottom: 0
+            transform: rotate(315deg)
+            transition: transform 0.2s ease 0.3s, bottom 0.3s ease 0s
+
+        span:after
+            top: 0
+            transform: rotate(-315deg)
+            transition: transform 0.5s ease 0.3s, top 0.3s ease 0s

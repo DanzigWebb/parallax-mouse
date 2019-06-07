@@ -12,21 +12,14 @@ function parallax(e) {
 document.addEventListener('mousemove', parallax)
 
 
-
-window.addEventListener('scroll', function () {
-	let upButton = document.querySelector('#up-button');
-	if (pageYOffset > 400) {
-		upButton.classList.add('is-active');
-	} else {
-		upButton.classList.remove('is-active');
-	}
-	upButton.addEventListener('click', e => {
-		window.scrollTo(0, 0)
+let scrollTop = function () {
+	let btnUp = document.querySelector('.footer-scroll-up');
+	btnUp.addEventListener('click', function() {
+		window.scrollTo(0, 0);
 	})
-})
+}
 
 
-
-sidebar.init()
-
-Tabs.init()
+scrollTop ()
+sidebar.init();
+Tabs.init();
